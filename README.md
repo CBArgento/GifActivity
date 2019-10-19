@@ -1,2 +1,2 @@
-# GifActivity
-Testing javascript
+# GifTastic
+Working with javascript
