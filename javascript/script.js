@@ -3,13 +3,13 @@ var giphy = ["Cow", "Chicken", "Lion", "Panda"];
 function displayGiphyInfo() {
 
     var animal = $(this).attr("data-name");
-    var queryUrl = "api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=kJaS17Eda10rpHTFlH3oIGvInPsttnMx"
+    var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=kJaS17Eda10rpHTFlH3oIGvInPsttnMx";
 
     $.ajax({
-        url: queryURL,
+        url: queryUrl,
         method: "GET"
     }).then(function (response) {
-        console.log(response)
+        console.log(response.data)
 
         var gifDiv = $("<div class='movie'>");
 
@@ -28,7 +28,7 @@ function displayGiphyInfo() {
         $("#movies-view").prepend(gifDiv);
     });
 
-}
+ }
 
 function renderButtons() {
 
